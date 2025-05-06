@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("forecastForm").addEventListener("submit", async function (e) {
+  const form = document.getElementById("forecastForm");
+
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const item = document.getElementById("item").value;
@@ -17,13 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (!response.ok) {
-        throw new Error("Error: " + response.status);
+        throw new Error("Request failed with status " + response.status);
       }
 
       const data = await response.json();
       document.getElementById("result").textContent = JSON.stringify(data, null, 2);
     } catch (error) {
-      document.getElementById("result").textContent = error.message;
+      document.getElementById("result").textContent = "Error: " + error.message;
     }
   });
 });
