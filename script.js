@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
       resultContainer.style.display = "block";
 
       resultContainer.innerHTML = `
-        <h2>Prediction Result</h2>
-        <p><strong>Item:</strong> ${data.item}</p>
+        <h2>Resultados</h2>
+        <p><strong>Producto:</strong> ${data.item}</p>
         <p><strong>Tienda:</strong> ${data.store_code}</p>
         <p><strong>Semana:</strong> ${data.week}</p>
         <p><strong>Año:</strong> ${data.year}</p>
