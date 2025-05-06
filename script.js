@@ -18,7 +18,7 @@ document.getElementById("forecastForm").addEventListener("submit", async functio
     alert("Error: " + response.status);
     return;
   }
-
+  console.log(JSON.stringify({ item, store_code, week, year }));
   const data = await response.json();
   document.getElementById("result").textContent = JSON.stringify(data, null, 2);
 });
