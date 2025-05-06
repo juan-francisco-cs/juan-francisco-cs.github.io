@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
       resultContainer.innerHTML = `
         <h2>Prediction Result</h2>
         <p><strong>Item:</strong> ${data.item}</p>
-        <p><strong>Store:</strong> ${data.store_code}</p>
-        <p><strong>Week:</strong> ${data.week}</p>
-        <p><strong>Year:</strong> ${data.year}</p>
-        <p><strong>Prediction Days:</strong> ${data.week_predictions}</p>
+        <p><strong>Tienda:</strong> ${data.store_code}</p>
+        <p><strong>Semana:</strong> ${data.week}</p>
+        <p><strong>Año:</strong> ${data.year}</p>
+        <p><strong>Ventas estimadas semanales:</strong> ${data.week_predictions}</p>
         <table style="margin: 0 auto; border-collapse: collapse;">
           <thead>
-            <tr><th style="padding: 8px; border-bottom: 1px solid #ccc;">Date</th><th style="padding: 8px; border-bottom: 1px solid #ccc;">Predicted Sales</th></tr>
+            <tr><th style="padding: 8px; border-bottom: 1px solid #ccc;">Fecha</th><th style="padding: 8px; border-bottom: 1px solid #ccc;">Ventas estimadas</th></tr>
           </thead>
           <tbody>
             ${data.predictions.map(p =>
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </tr>`).join("")}
           </tbody>
         </table>
-        <br><button id="backButton">Go Back</button>
+        <br><button id="backButton">Volver</button>
       `;
 
       // Add back button listener
