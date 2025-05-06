@@ -1,21 +1,94 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 50px;
-}
-
-header {
-  background: #333;
-  color: white;
-  padding: 20px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 10px 0;
-  font-size: 18px;
-}
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(241, 188, 65), rgb(159, 206, 98), rgb(17, 40, 88));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    width: 90%;
+    max-width: 450px;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #111;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  form label {
+    font-weight: 600;
+    color: #222;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 2px;
+  }
+  
+  form select,
+  form input[type="number"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: box-shadow 0.2s ease;
+  }
+  
+  form select:focus,
+  form input[type="number"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.4);
+  }
+  
+  button[type="submit"] {
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
+  }
+  
+  #result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #333;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
