@@ -8,7 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const store_code = document.getElementById("store").value;
     const week = parseInt(document.getElementById("week").value);
     const year = parseInt(document.getElementById("year").value);
-
+    console.log("item:", document.getElementById("item"));
+    console.log("store:", document.getElementById("store"));
+    console.log("week:", document.getElementById("week"));
+    console.log("year:", document.getElementById("year"));
+    console.log(JSON.stringify({ item, store_code, week, year }))
     try {
       const response = await fetch("https://ventas-api-518727385555.europe-west1.run.app/predict", {
         method: "POST",
